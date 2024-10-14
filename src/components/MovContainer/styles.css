@@ -1,0 +1,63 @@
+.form_container{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+}
+input{
+    width: 30%;
+}
+.title_container{
+    display: flex;
+    justify-content: center;
+}
+.tableContainer{
+    width: 40%;
+    margin: auto;
+}
+table{
+    width: 100%;
+    background-color: #fff;
+    text-align: left;
+    border-collapse: collapse;
+}
+th,td{
+    border: solid 2px #111;
+    padding: 0.5rem;
+}
+thead{
+    background-color: yellowgreen;
+}
+@media (max-width:52rem) {
+    .tableContainer{
+        width: 80%;
+    }
+}
+@media (max-width:52rem) {
+    .tableContainer{
+        width: 86%;
+    }
+}
+@media (max-width:30rem) {
+    .tableContainer{
+        width: 80%;
+    }
+    table tr{
+        display: flex;
+        flex-direction: column;
+        border: solid 1px #957272;
+        margin-bottom: 1rem;
+    }
+    table td{
+        border: none;
+    }
+    thead{
+        display: none;
+    }
+    table td [data-title]{
+        display: flex;
+    }
+    table td[data-title]::before{
+        content: attr(data-title);
+        margin-right: 1rem;
+    }
+}
